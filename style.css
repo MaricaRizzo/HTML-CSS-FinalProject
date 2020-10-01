@@ -1,8 +1,158 @@
+:root{
+    --theme_color: #DB7953;
+    --light_color: #F5CCBC;
+    --light_color_opacity: rgba(245, 204, 188, 0.6);
+    --background_color: rgba(183, 194, 192, 0.5);
+    --dark_color: #8F2700;
+    --text_color: #ECF5F4;
+}
+
 body{
     max-width: 1440px;
     margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
-header{
-    background-color: ;
+
+h1, h2, h3 {
+    font-family: 'Poiret One', cursive;
+    font-weight: lighter;
 }
+
+h3 {
+    color: var(--dark_color);
+}
+
+
+
+
+
+
+/*HEADER CODE*/
+header{
+    background-color: var(--theme_color);
+    color: var(--light_color);
+    
+}
+
+.header_home h1 {
+    text-align: center; 
+}
+
+header h1{
+    text-decoration: underline;
+    font-size: 72px;
+    margin: 0;
+    padding-top: 1rem;
+    text-shadow: 0px 4px 4px #0000003b; 
+}
+
+header h2{
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 1rem;
+    text-shadow: 0px 4px 4px #0000003b;
+    text-align: center;
+}
+
+/*END HEADER CODE*/
+
+
+
+
+
+
+
+
+
+
+
+/*MAIN CODE*/
+
+/*HOME PAGE CODE*/
+
+.home_work {
+    min-height: 395px;
+    background-image: url("./Pictures/tom-crew-5HRCkrSs9Dk-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.home_about {
+    min-height: 395px;
+    background-image: url("./Pictures/jade-scarlato-TXCfJd83AI0-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.home_store {
+    min-height: 395px;
+    background-image: url("./Pictures/jade-scarlato-qbXP18rappM-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+
+.home__cards_link {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light_color_opacity);
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.home__cards_link a {
+    text-decoration: none;
+    color: var(--dark_color);
+    font-size: 24px;
+    padding-right: 2rem;
+}
+
+.home__cards_link:hover {
+    background-color: var(--light_color);
+}
+
+.link_arrow{
+    max-width: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*END MAIN CODE*/
+
+
+
+
+
+
+
+
+
+
+/*FOOTER CODE*/
+
+footer {
+    background-color: var(--theme_color);
+    color: var(--light_color);   
+}
+
+footer p{
+    font-size: 11px;
+    padding: 2rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+/*END FOOTER CODE*/
