@@ -36,16 +36,20 @@ header{
     
 }
 
-.header_home h1 {
-    text-align: center; 
-}
+
 
 header h1{
     text-decoration: underline;
-    font-size: 72px;
+    font-size: 64px;
     margin: 0;
     padding-top: 1rem;
+    padding-left: 1rem;
     text-shadow: 0px 4px 4px #0000003b; 
+}
+
+.header_home h1 {
+    text-align: center; 
+    font-size: 72px;
 }
 
 header h2{
@@ -73,6 +77,10 @@ header h2{
         font-size: 34px;
         padding: 3rem 0 0 0.5rem;
     }
+
+    nav ul{
+        max-width: 65%;
+    }
 }
 
 @media only screen and (min-width: 800px) {
@@ -85,6 +93,30 @@ header h2{
         font-size: 34px;
         padding: 6.2rem 0 0 0.5rem;
     }
+}
+
+
+nav {
+    background-color: var(--light_color); 
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    padding: 1rem 0;
+    margin: 0 auto;
+    
+}
+
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: #7D9994;
 }
 /*END HEADER CODE*/
 
@@ -193,11 +225,85 @@ header h2{
     }
 }
 
+/*END HOME PAGE CODE*/
 
 
 
 
+/*ABOUT PAGE CODE*/
 
+.about_main {
+    background-image: url("./Pictures/jade-scarlato-sEGt6bYp7VU-unsplash.jpg");
+    background-size: cover;
+    padding: 1.5rem 0;
+    animation: fadeIn 1s linear 0s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 90%;
+    background-color: var(--background_color);
+    margin: auto;
+    padding: 1.5rem 0; 
+}
+
+.about section{
+    animation: fadeIn 2s linear 0s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+.about img{
+    animation: fadeIn 1s linear 0s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+
+.about img, .about section{
+    max-width: 90%;
+    margin: auto;
+}
+
+.about h3{
+    text-align: center;
+    font-size: 36px;
+}
+
+.about p{
+    color: var(--text_color);
+    text-align: justify;
+    font-size: 18px;
+    line-height: 2rem;
+}
+
+@media only screen and (min-width: 900px){
+    .about_main{
+        padding: 3rem 0;
+    }
+    .about{
+        flex-direction: row-reverse;
+        padding: 2rem 0;
+    }
+    .about img{
+        max-width: 35%;
+    }
+
+    .about section{
+        max-width: 40%;
+    }
+
+    .about h3{
+        font-size: 50px;
+        margin: 2rem;
+    }
+}
+
+/*END ABOUT PAGE CODE*/
 
 
 
