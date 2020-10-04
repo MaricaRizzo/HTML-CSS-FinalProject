@@ -36,8 +36,6 @@ header{
     
 }
 
-
-
 header h1{
     text-decoration: underline;
     font-size: 64px;
@@ -60,44 +58,29 @@ header h2{
     text-align: center;
 }
 
-
-@media only screen and (min-width: 600px) {
-    .header_home{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding-bottom: 1rem;
-    }
-
-    header h1 {
-        padding:0;
-    }
-
-    header h2 {
-        font-size: 34px;
-        padding: 3rem 0 0 0.5rem;
-    }
-
-    nav ul{
-        max-width: 65%;
-    }
+.container_header{
+    display: flex;
+    flex-direction: row;
 }
 
-@media only screen and (min-width: 800px) {
-
-    header h1 {
-        font-size: 120px;
-    }
-
-    header h2 {
-        font-size: 34px;
-        padding: 6.2rem 0 0 0.5rem;
-    }
+.header_title{
+    min-width: 85%;
 }
 
+.toggle{
+min-width: 15%;
+align-self: center;   
+font-size: 30px; 
+text-shadow: 0px 4px 4px #0000003b;
+}
 
 nav {
     background-color: var(--light_color); 
+    display: none;
+}
+
+.nav.show_menu{
+    display: block;
 }
 
 nav ul{
@@ -112,7 +95,9 @@ nav ul{
 
 nav a{
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 0px 4px 4px #0000003b; 
+}
 }
 
 nav a:hover{
@@ -121,6 +106,63 @@ nav a:hover{
 
 nav li:hover{
     transform: scale(1.1);
+}
+nav a:hover{
+    color: #7D9994;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+    .header_home, .header_title{
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+
+    .header_home h1, .header_title h1 {
+        padding:0;
+        font-size: 72px;
+    }
+
+    .header_home h2, .header_title h2{
+        font-size: 34px;
+        padding: 3rem 0 0 0.5rem;
+    }
+
+    nav{
+        display: block;
+    }
+
+    nav ul{
+        max-width: 65%;
+    }
+
+    .toggle{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (min-width: 800px) {
+
+    .header_home h1, .header_title h1 {
+        font-size: 110px;
+    }
+
+    .header_home h2, .header_title h2 {
+        font-size: 36px;
+        padding: 5.5rem 0 0 0.5rem;
+    }
+
+
+    nav {
+        font-size: 25px;
+    }
+}
 }
 /*END HEADER CODE*/
 
@@ -137,6 +179,11 @@ nav li:hover{
 /*MAIN CODE*/
 
 /*HOME PAGE CODE*/
+
+.main_home {
+    display: flex;
+    flex-direction: column;
+}
 
 .home_work {
     min-height: 395px;
@@ -159,7 +206,7 @@ nav li:hover{
     animation-fill-mode: forwards; 
 }
 
-.home_store {
+.home_contact {
     min-height: 395px;
     background-image: url("./Pictures/jade-scarlato-qbXP18rappM-unsplash.jpg");
     background-size: cover;
@@ -178,6 +225,9 @@ nav li:hover{
      } 
 } 
 
+.main_home a{
+    text-decoration: none;
+}
 
 .home__cards_link {
     display: flex;
@@ -191,11 +241,12 @@ nav li:hover{
     max-height: 2.5rem;
 }
 
-.home__cards_link a {
+.home__cards_link p {
     text-decoration: none;
     color: var(--dark_color);
     font-size: 24px;
     padding-right: 2rem;
+    margin: 0;
 }
 
 .home__cards_link:hover {
@@ -220,7 +271,7 @@ nav li:hover{
         min-height: 598px;
         grid-area: 2/1/3/2;
     }
-    .home_store{
+    .home_contact{
         min-height: 598px;
         grid-area: 2/2/3/3;
     }
@@ -340,64 +391,106 @@ nav li:hover{
     animation-fill-mode: forwards; 
 }
 
+.work_cards p{
+    background-color: var(--background_color);
+    color: var(--text_color);
+    text-align: center;
+    font-family:  'Poiret One', cursive;
+    font-size: 24px;
+    position: absolute;
+    top: 1rem;
+    min-width: 100%;
+    padding: 0.5rem 0;
+    display: none;
+}
+
 .work_cards article{
-    max-width: 90%;
+    min-width: 80%;
+    min-height: 12rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    margin: 2.5rem auto 0;
     padding-top: 2.5rem;
+    position: relative;
 }
 
 .article1 {
+    background-image: url(./Pictures/tom-crew-Oi1PBOWyX_k-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 3s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article2 {
+    background-image: url(./Pictures/tom-crew-oHrC8V_XRU4-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 3.5s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article3 {
+    background-image: url(./Pictures/tom-crew-vu0lyZYeseY-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 4s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article4 {
+    background-image: url(./Pictures/tom-crew-YA2E3d7a9Wo-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 4.5s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article5 {
+    background-image: url(./Pictures/tom-crew-NUUjVj4YQLA-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 5s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article6 {
+    background-image: url(./Pictures/tom-crew-oiZAQvxTcYQ-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 5.5s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article7 {
+    background-image: url(./Pictures/tom-crew-3uwu5K0RtaE-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 6s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article8 {
+    background-image: url(./Pictures/tom-crew-bgIO-u4GEfI-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 6.5s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
 }
 
 .article9 {
+    background-image: url(./Pictures/tom-crew-fZTNZ-7-ong-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
     animation: fadeIn 7s linear 0s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards; 
@@ -407,10 +500,10 @@ nav li:hover{
     transform: scale(1.1);
 }
 
-.work_cards img{
-    max-width: 90%;
-    margin: auto;
+.article1:hover p, .article2:hover p, .article3:hover p, .article4:hover p, .article5:hover p, .article6:hover p, .article7:hover p, .article8:hover p, .article9:hover p{
+    display: block;
 }
+
 
 @media only screen and (min-width: 700px){
 
@@ -424,13 +517,13 @@ nav li:hover{
     }
     
     .work_cards article{
-        max-width: 40%;
+        min-width: 40%;
     }
 }
 
 @media only screen and (min-width: 1000px){
     .work_cards article{
-        max-width: 31%;
+        min-width: 26%;
     }
 
 }
@@ -487,15 +580,24 @@ nav li:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
-iframe {
+.map_container {
     max-width: 80%;
     margin: auto;
     padding: 3rem 0;
 }
 
+iframe{
+    max-width: 100%;
+}
+
 @media only screen and (min-width: 800px){
+
+    .store{
+        padding: 6rem 0;
+    }
     .ul_store{
         display: flex;
         flex-direction: row;
@@ -511,13 +613,11 @@ iframe {
         font-size: 40px;
     }
 
-    iframe {
-        max-width: 100%;
+    .map_container{
+        width: 90%;
     }
 }
 /*END STORE CODE*/
-
-
 
 
 /*END MAIN CODE*/
