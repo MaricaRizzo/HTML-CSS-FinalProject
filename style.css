@@ -285,6 +285,8 @@ nav a:hover{
 
 
 
+
+
 /*ABOUT PAGE CODE*/
 
 .about_main {
@@ -359,6 +361,12 @@ nav a:hover{
 }
 
 /*END ABOUT PAGE CODE*/
+
+
+
+
+
+
 
 /*WORK PAGE CODE*/
 
@@ -528,9 +536,12 @@ nav a:hover{
 
 }
 
-
-
 /*END WORK PAGE CODE*/
+
+
+
+
+
 
 /*STORE CODE*/
 
@@ -575,23 +586,7 @@ nav a:hover{
     animation-fill-mode: forwards;
 }
 
-.map{
-    background-color: var(--background_color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
 
-.map_container {
-    max-width: 80%;
-    margin: auto;
-    padding: 3rem 0;
-}
-
-iframe{
-    max-width: 100%;
-}
 
 @media only screen and (min-width: 800px){
 
@@ -611,10 +606,6 @@ iframe{
 
     .store h3{
         font-size: 40px;
-    }
-
-    .map_container{
-        width: 90%;
     }
 }
 /*END STORE CODE*/
